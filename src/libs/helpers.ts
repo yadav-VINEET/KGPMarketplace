@@ -6,9 +6,9 @@ export async function connect(){
 }
 
 export const categories = [
-    {key:'cycle', label:'cycle', icon: faBicycle},
-    {key:'electronics', label:'Electronics', icon: faMobile},
-    {key:'household', label:'household', icon: faHouse},
-    {key:'books', label:'books', icon: faBook},
+    {key:'cycle', label:'Cycle', icon: faBicycle},
+    {key:'electronics', label:'Mobile', icon: faMobile},
+    {key:'household', label:'Home', icon: faHouse},
+    {key:'books', label:'Books', icon: faBook},
     // {key:'properties', label:'Properties', icon: faHome},
 ];

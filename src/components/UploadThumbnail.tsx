@@ -20,7 +20,7 @@ export default function UploadThubmbail({file,onClick}:Props){
         return (
             <div onClick={handleClick}>
                 <MyImage 
-                src={file.filePath + '?tr=w-56,h-56,fo-auto'}  
+                src={file.filePath + '?tr=w-1000,h-1000,fo-auto'}  
                 aiCrop={true}
                 width={300}
                 height={300}

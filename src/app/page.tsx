@@ -43,7 +43,7 @@ export default function Home() {
 
       <div className="p-4 grow bg-gray-100 w-3/4">
         <h2 className="font-bold mb-4 mt-2">Latest Products</h2>
-        <div className="grid md:grid-cols-4 gap-x-4 gap-y-6">
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 justify-center gap-x-4 gap-y-6">
         {ads.map(ad => (
           <AdItem key={ad._id} ad={ad}/>
         ))}

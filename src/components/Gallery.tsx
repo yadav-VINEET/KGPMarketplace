@@ -36,7 +36,8 @@ export default function Gallery({files}:{files:UploadResponse[]}) {
                         <div className="absolute inset-4 flex justify-center items-center">
                             <UploadView file={activeFile}/>
                         </div>
-                        <div className="absolute inset-4 flex items-center">
+                        {files.length>1 && (
+                            <div className="absolute inset-4 flex items-center">
                             <div className="flex w-full justify-between">
                             <button onClick={prev} className="rounded-full size-12 flex justify-center items-center transition bg-gray-500/40 hover:bg-gray-500/80">
                                 <FontAwesomeIcon icon={faChevronLeft}/>
@@ -46,10 +47,13 @@ export default function Gallery({files}:{files:UploadResponse[]}) {
                             </button>
                             </div>
                         </div>
+                        )}
                         </>
                     )}
+
                 </div>
-                <div className="p-4 flex gap-4 justify-center relative z-10" >
+                {files.length>1 && (
+                    <div className="p-4 flex gap-4 justify-center relative z-10" >
                     {files.map(file => (
                         <div 
                         key={file.fileId}
@@ -60,6 +64,7 @@ export default function Gallery({files}:{files:UploadResponse[]}) {
                         </div>
                     ))}
                 </div>
+                )}
         </>
     );
 }
