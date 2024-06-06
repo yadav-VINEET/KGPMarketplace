@@ -1,6 +1,6 @@
 'use server';
 
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/authOptions";
 import AdForm from "@/components/AdForm";
 import { connect } from "@/libs/helpers";
 import { AdModel } from "@/models/Ad";

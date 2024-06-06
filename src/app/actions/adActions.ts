@@ -2,9 +2,9 @@
 
 import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
 import { AdModel } from "@/models/Ad";
 import { revalidatePath } from "next/cache";
+import { authOptions } from "@/libs/authOptions";
 
 async function connect(){
     return mongoose.connect(process.env.MONGODB_URL as string);
