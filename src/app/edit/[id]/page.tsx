@@ -19,7 +19,6 @@ export default async function EditPage(props: Props) {
     const session = await getServerSession(authOptions);
     const adDoc = await AdModel.findById(id);
 
-    console.log({ adDoc });
 
     if (!adDoc) {
         return '404 Not Found';

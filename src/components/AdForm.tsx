@@ -29,13 +29,13 @@ export default function AdForm({
         let result;
         try {
             if (adId) {
-                console.log("Updating ad with ID:", adId);
+                // console.log("Updating ad with ID:", adId);
                 result = await updateAd(adId, formData);
             } else {
-                console.log("Creating new ad");
+                // console.log("Creating new ad");
                 result = await createAd(formData);
             }
-            console.log("Ad operation result:", result);
+            // console.log("Ad operation result:", result);
             if (!result || !result._id) {
                 throw new Error("Failed to get the result of the ad operation");
             }

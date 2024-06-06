@@ -16,7 +16,6 @@ export default function Home() {
 
   function fetchAds(params?: URLSearchParams) {
     const url = params?`/api/ads?${params.toString()}`:`/api/ads/`;
-    console.log({url});
     fetch(url).then(response => {
       response.json().then(adsDocs => {
         setAds(adsDocs)

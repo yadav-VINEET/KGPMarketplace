@@ -20,7 +20,6 @@ export async function createAd(formData: FormData){
         userEmail: session?.user?.email,
     };
     const newAdDoc = await AdModel.create(newAdData);
-    console.log(newAdDoc);
     return JSON.parse(JSON.stringify(newAdDoc));
 }
 
@@ -46,7 +45,6 @@ export async function createAd(formData: FormData){
         if (!updatedAdDoc) {
             throw new Error("Failed to update ad");
         }
-        console.log(updatedAdDoc);
         revalidatePath(`/ad/`+adId);
         return JSON.parse(JSON.stringify(updatedAdDoc));
     }
