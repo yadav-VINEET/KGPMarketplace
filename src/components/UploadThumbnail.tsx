@@ -24,7 +24,7 @@ export default function UploadThubmbail({file,onClick}:Props){
                 aiCrop={true}
                 width={300}
                 height={300}
-                alt={"Product Thumbnail" }/>
+                alt={file.name || "Image"}/>
             </div>
         )
     }
