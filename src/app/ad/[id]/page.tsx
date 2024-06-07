@@ -43,7 +43,7 @@ export default async function SingleAdPage(args: Props){
                 </div>
                 )}
                 <label htmlFor="">Price</label>
-                <p className="font-bold">{adDoc.price}</p>
+                <p className="font-bold">{Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(adDoc.price)}</p>
                 <label htmlFor="">category</label>
                 <span>{adDoc.category}</span>
                 <label htmlFor="">description</label>

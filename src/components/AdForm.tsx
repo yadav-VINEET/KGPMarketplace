@@ -48,18 +48,17 @@ export default function AdForm({
     return (
         <form
             action={handleSubmit}
-            className="grid grid-cols-2 gap-8 max-w-xl mx-auto"
+            className="flex flex-col p-4 md:grid md:grid-cols-2 md:gap-8 max-w-xl mx-auto"
         >
-            <div className="grow pt-8">
+            <div className="grow md:pt-8">
                 <UploadArea files={files} setFiles={setFiles} />
-
                 <div>
                     <label htmlFor="hallIn">
                         <FontAwesomeIcon className="pr-1 pl-1" icon={faLocationCrosshairs} />
                         SHARE LOCATION
                     </label>
-                    <select name="location" id="hallIn" defaultValue={ad?.location || '0'} className="name">
-                        <option disabled value='RKp'>Select Hall</option>
+                    <select name="location" id="hallIn" defaultValue={ad?.location || ''} className="name">
+                        <option disabled value=''>Select Hall</option>
                         <option value="RK">RK</option>
                         <option value="MS">MS</option>
                         <option value="LLR">LLR</option>
@@ -73,16 +72,22 @@ export default function AdForm({
                         <option value="SNVH">SNVH</option>
                         <option value="VS">VS</option>
                         <option value="RP">RP</option>
+                        <option value="JCB">JCB</option>
+                        <option value="GKH">GKH</option>
+                        <option value="SAM">SAM</option>
+                        <option value="HJB">HJB</option>
+                        <option value="BC ROY">BC ROY</option>
+                        <option value="RLB">RLB</option>
                     </select>
                 </div>
             </div>
 
             <div className="grow pt-2">
                 <label htmlFor="titleIn">Title</label>
-                <input id="titleIn" name="title" type="text" placeholder="Title" defaultValue={ad?.title} />
+                <input required id="titleIn" name="title" type="text" placeholder="Title" defaultValue={ad?.title} />
 
                 <label htmlFor="priceIn">Price</label>
-                <input id="priceIn" name="price" type="number" placeholder="Price" defaultValue={ad?.price} />
+                <input required id="priceIn" name="price" type="number" placeholder="Price" defaultValue={ad?.price} />
 
                 <label htmlFor="categoryIn">Category</label>
                 <select name="category" defaultValue={ad?.category || ''} id="categoryIn" className="name">
@@ -95,7 +100,7 @@ export default function AdForm({
                 <textarea name="description" id="descriptionIn" placeholder="description" defaultValue={ad?.description}></textarea>
 
                 <label htmlFor="contactIn">Contact Information</label>
-                <textarea name="contact" id="contactIn" placeholder="Mobile: +91-9876 123 123" defaultValue={ad?.contact}></textarea>
+                <textarea required name="contact" id="contactIn" placeholder="Mobile: +91-9876 123 123" defaultValue={ad?.contact}></textarea>
                 <SubmitButton>Publish</SubmitButton>
             </div>
         </form>
