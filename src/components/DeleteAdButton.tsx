@@ -9,7 +9,7 @@ export default function DeleteAdButton({id}:{id:string}) {
   const router = useRouter();
 
   function handleDelete() {
-    fetch(`/api/ads?id=${id}`, {
+    fetch(`/api/products?id=${id}`, {
       method: 'DELETE',
     }).then(() => {
       setShowDeleteQuestion(false);
@@ -27,13 +27,13 @@ export default function DeleteAdButton({id}:{id:string}) {
               className="px-2 py-1 border rounded"
               onClick={() => setShowDeleteQuestion(false)}
             >
-              No, cancel
+              Cancel
             </button>
             <button
               className="py-1 px-2 bg-red-600 text-white rounded"
               onClick={handleDelete}
             >
-              Yes, Delete!
+              Delete
             </button>
           </div>
         </div>
