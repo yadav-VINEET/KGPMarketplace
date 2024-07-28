@@ -2,7 +2,7 @@ import { faBicycle, faBook, faHouse, faMobile } from "@fortawesome/free-solid-sv
 import mongoose from "mongoose";
 
 export async function connect(){
-    return mongoose.connect(process.env.MONGODB_URL as string);
+    return await mongoose.connect(process.env.MONGODB_URL as string);
 }
 
 export const categories = [

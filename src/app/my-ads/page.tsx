@@ -12,7 +12,7 @@ export default async function MyAdsPage() {
   if (!email) {
     return "no email found";
   }
-  await connect();
+  // await connect();
   const adsDocs = await AdModel.find({ userEmail: email });
   return (
     <div className="container my-8 mx-auto p-4">

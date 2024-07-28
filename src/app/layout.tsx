@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/libs/authOptions";
+import { connect } from "@/libs/helpers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await getServerSession(authOptions);
+  await connect()
   return (
     <html lang="en">
       <body className={inter.className}>
