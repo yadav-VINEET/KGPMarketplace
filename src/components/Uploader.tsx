@@ -17,6 +17,7 @@ export default function Uploader(props:IKUploadProps) {
 
             <IKUpload  
                 {...props}
+                accept="image/*"
                 validateFile={(file)=>{
                     if(file.type.substring(0,5)!=="image"){
                         return false;
