@@ -15,7 +15,15 @@ export default function Uploader(props:IKUploadProps) {
 
             >
 
-            <IKUpload  {...props} />
+            <IKUpload  
+                {...props}
+                validateFile={(file)=>{
+                    if(file.type.substring(0,5)!=="image"){
+                        return false;
+                    }
+                    return true;
+                }}
+                />
             </IKContext>
         </>
     );
