@@ -12,7 +12,7 @@ async function connect(){
 
 export async function createAd(formData: FormData){
     const {files,...data} = Object.fromEntries(formData);
-    await connect();
+    // await connect();
     const session= await getServerSession(authOptions);
     const newAdData = {
         ...data,
@@ -26,7 +26,7 @@ export async function createAd(formData: FormData){
 
     export async function updateAd(adId: string, formData: FormData) {
         const { files, ...data } = Object.fromEntries(formData);
-        await connect();
+        // await connect();
         const session = await getServerSession(authOptions);
         const adDoc = await AdModel.findById(adId);
         
