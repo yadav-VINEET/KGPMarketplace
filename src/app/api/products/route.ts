@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/libs/authOptions";
 
 export async function GET(req: Request, res: Response){
-    // await connect();
+    await connect();
 
     const {searchParams} = new URL(req.url);
 
@@ -35,7 +35,7 @@ export async function GET(req: Request, res: Response){
 export async function DELETE(req: Request) {
     const url = new URL(req.url);
     const id = url.searchParams.get('id');
-    // await connect();
+    await connect();
     const adDoc = await AdModel.findById(id);
     const session = await getServerSession(authOptions);
     if (!adDoc || adDoc.userEmail !== session?.user?.email) {

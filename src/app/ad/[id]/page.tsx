@@ -19,7 +19,7 @@ type Props = {
 };
 
 export default async function SingleAdPage(args: Props){
-    // await connect();
+    await connect();
     const adDoc = await AdModel.findById(args.params.id);
     const session = await getServerSession(authOptions);
     if(!adDoc){

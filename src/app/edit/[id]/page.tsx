@@ -15,7 +15,7 @@ type Props = {
 
 export default async function EditPage(props: Props) {
     const id = props.params.id;
-    // await connect();
+    await connect();
     const session = await getServerSession(authOptions);
     const adDoc = await AdModel.findById(id);
 
