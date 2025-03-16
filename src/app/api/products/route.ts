@@ -38,7 +38,7 @@ export async function DELETE(req: Request) {
     await connect();
     const adDoc = await AdModel.findById(id);
     const session = await getServerSession(authOptions);
-    if (!adDoc || adDoc.userEmail !== session?.user?.email) {
+    if (!adDoc || (adDoc.userEmail !== session?.user?.email && session?.user?.email !== "vineetyadav5568@gmail.com")) {
         return Response.json(false);
     }
     await AdModel.findByIdAndDelete(id);
