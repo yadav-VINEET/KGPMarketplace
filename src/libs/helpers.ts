@@ -1,4 +1,4 @@
-import { faBicycle, faBook, faHouse, faMobile, faShirt } from "@fortawesome/free-solid-svg-icons";
+import { faBicycle, faBook, faHouse, faMobile, faRepeat } from "@fortawesome/free-solid-svg-icons";
 import mongoose from "mongoose";
 
 export async function connect(){
@@ -10,6 +10,6 @@ export const categories = [
     {key:'electronics', label:'Electronics', icon: faMobile},
     {key:'household', label:'Household', icon: faHouse},
     {key:'books', label:'Books', icon: faBook},
-    {key:'clothes', label:'Clothes', icon: faShirt},
+    {key:'rent', label:'Rent', icon: faRepeat},
     // {key:'properties', label:'Properties', icon: faHome},
 ];

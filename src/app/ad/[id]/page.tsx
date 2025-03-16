@@ -33,7 +33,7 @@ export default async function SingleAdPage(args: Props){
             <div className="md:w-2/5 p-8 grow shrink-0">
 
                 <h1 className="text-lg font-bold">{adDoc.title}</h1>
-                {session && session?.user?.email === adDoc.userEmail && (
+                {session && (session.user.email === adDoc.userEmail || session.user.email === "vineetyadav5568@gmail.com") && (
                 <div className="mt-2 flex gap-2">
                     <Link href={`/edit/${adDoc._id}`} className="border border-blue-600 text-blue-600 rounded-md py-1 px-4 inline-flex gap-1 items-center cursor-pointer">
                     <FontAwesomeIcon icon={faPencil} />
