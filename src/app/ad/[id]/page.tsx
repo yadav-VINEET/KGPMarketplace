@@ -27,7 +27,7 @@ export default async function SingleAdPage(args: Props){
     }
     return(
         <div className="flex flex-col md:flex-row absolute inset-0 top-16"  >
-            <div className="md:w-3/5 md:h-full h-1/2 flex flex-col grow bg-black text-white relative">
+            <div className="md:w-3/5 md:h-full h-1/2 flex flex-col grow bg-black text-white relative overflow-hidden">
                 <Gallery files={adDoc.files}/>
             </div>
             <div className="md:w-2/5 p-8 grow shrink-0">

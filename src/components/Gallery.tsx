@@ -26,7 +26,7 @@ export default function Gallery({files}:{files:UploadResponse[]}) {
     return (
         <>
         {activeFile && (
-                        <div className="absolute inset-0 overflow-hidden">
+                        <div className="absolute inset-0 overflow-hidden w-full h-full">
                         <MyImage className="object-cover opacity-30 blur w-full h-full" src={activeFile.filePath} alt="bg" height={2048} width={2048} />
                         </div>
         )}

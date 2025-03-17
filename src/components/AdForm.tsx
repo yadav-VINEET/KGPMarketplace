@@ -57,7 +57,7 @@ export default function AdForm({
                         <FontAwesomeIcon className="pr-1 pl-1" icon={faLocationCrosshairs} />
                         SHARE LOCATION
                     </label>
-                    <select name="location" id="hallIn" defaultValue={ad?.location || ''} className="name">
+                    <select name="location" id="hallIn" defaultValue={ad?.location || ''} className="name mb-4">
                         <option disabled value=''>Select Hall</option>
                         <option value="RK">RK</option>
                         <option value="MS">MS</option>
@@ -79,6 +79,9 @@ export default function AdForm({
                         <option value="BC ROY">BC ROY</option>
                         <option value="RLB">RLB</option>
                     </select>
+                    <div className="flex justify-center items-center">
+                    <a href="https://resale-calculator.vercel.app/" target="_blank" className="text-white px-4 py-2 rounded bg-blue-600">Smart Price Calculator</a>
+                    </div>
                 </div>
             </div>
 
