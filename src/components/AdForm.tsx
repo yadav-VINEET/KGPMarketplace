@@ -103,7 +103,7 @@ export default function AdForm({
                 <textarea name="description" id="descriptionIn" placeholder="description" defaultValue={ad?.description}></textarea>
 
                 <label htmlFor="contactIn">Contact Information</label>
-                <textarea required name="contact" id="contactIn" placeholder="Mobile: +91-9876 123 123" defaultValue={ad?.contact}></textarea>
+                <input required name="contact" id="contactIn" type="number" placeholder="+91-9876 123 123" defaultValue={ad?.contact}></input>
                 <SubmitButton>Publish</SubmitButton>
             </div>
         </form>

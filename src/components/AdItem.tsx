@@ -6,17 +6,21 @@ import { Ad } from "@/models/Ad";
 
 function AdItem({ ad }: { ad: Ad }) {
   return (
-    <div className="min-h-60 border border-black-200 flex flex-col relative justify-start">
+    <div className="min-h-60 border border-gray-300 flex flex-col relative justify-end items-center overflow-hidden">
       {ad.files?.length > 0 && (
-        <Link href={`/ad/${ad._id}`} className="rounded-md overflow-hidden">
+        <Link href={`/ad/${ad._id}`} className="rounded-md overflow-hidden w-5/6">
           <UploadThumbnail onClick={() => {}} file={ad.files[0]} />
         </Link>
       )}
-      <div className="pl-2">
-        <p className="mt-1 font-bold">{Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(ad.price)}</p>
-        <Link href={`/ad/${ad._id}`}>{ad.title}</Link>
+      <div className="pl-2 w-5/6">
+        <p className="mt-1 font-bold w-3/4 truncate">
+          {Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(ad.price)}
+        </p>
+        <Link href={`/ad/${ad._id}`} className="w-3/4 truncate block">
+          {ad.title}
+        </Link>
       </div>
-      <Link href={`/ad/${ad._id}`} className="absolute inset-0"></Link>
+      <Link href={`/ad/${ad._id}`} className="absolute inset-0 w-5/6"></Link>
     </div>
   );
 }

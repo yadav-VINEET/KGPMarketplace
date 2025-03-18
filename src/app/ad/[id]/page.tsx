@@ -49,7 +49,7 @@ export default async function SingleAdPage(args: Props){
                 <label htmlFor="">description</label>
                 <p>{adDoc.description}</p>
                 <label htmlFor="">contact</label>
-                <p>{adDoc.contact}</p>
+                <p><a href={`https://wa.me/${adDoc.contact}`} target="_blank" className="text-blue-600 underline">{adDoc.contact}</a></p>
                 <label htmlFor="">location</label>
                 <p>{adDoc.location}</p>
             </div>
